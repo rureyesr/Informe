@@ -1,0 +1,120 @@
+<ion-header translucent="true" mode="ios">
+  <ion-toolbar>
+    <ion-title color="primary">Informe diario</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense" mode="ios">
+    <ion-toolbar>
+      <ion-title size="large" align-center color="primary">Informe diario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="auto">
+        <ion-text class="container" color="primary">
+          <h1>{{ formattedDate }}</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3" >
+        <ion-button expand="full" shape="round" (click)="incrementValue(0)" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6" >
+        <ion-item class="custom-item" fill="outline" mode="md">
+          <ion-label position="floating">Publicaciones</ion-label>
+          <ion-input type="number" placeholder="Ingrese publicaciones" [value]="inputValue[0]" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="decrementValue(0)" mode="ios">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="incrementValue(1)" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item class="custom-item" fill="outline" mode="md">
+          <ion-label position="floating">Videos presentados</ion-label>
+          <ion-input type="number" placeholder="Ingrese videos presentados" [value]="inputValue[1]" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="decrementValue(1)" mode="ios">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="incrementValue(2)" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item  fill="outline" mode="md">
+          <ion-label position="floating">Horas</ion-label>
+          <ion-input type="number" placeholder="Ingrese horas" [value]="inputValue[2]" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="decrementValue(2)" mode="ios">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="incrementValueM" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item  fill="outline" mode="md">
+          <ion-label position="floating">Minutos</ion-label>
+          <ion-input type="number" placeholder="Ingrese minutos" [value]="inputValueM" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round" (click)="decrementValueM" mode="ios">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round"  (click)="incrementValue(3)" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item  fill="outline" mode="md">
+          <ion-label position="floating">Revisitas</ion-label>
+          <ion-input type="number" placeholder="Ingrese cantidad de revisitas" [value]="inputValue[3]" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" shape="round"  (click)="decrementValue(3)" mode="ios">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button  expand="full" shape="round" (click)="incrementValue(4)" mode="ios">+</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item fill="outline" mode="md">
+          <ion-label position="floating">Cursos dirigidos*</ion-label>
+          <ion-input type="number" placeholder="Cantidad de estudios" [value]="inputValue[4]" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button  expand="full" shape="round" class="custom-btn" (click)="decrementValue(4)" mode="ios">-</ion-button>
+      </ion-col>
+      <ion-item>
+        <p class="info" >*<i>diferentes</i> cursos biblicos dirigidos durante el mes</p>
+      </ion-item>
+
+    </ion-row>
+
+
+  </ion-grid>
+
+</ion-content>
